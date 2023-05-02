@@ -12,9 +12,9 @@ class MainActivity : AppCompatActivity(), NavigationHost {
 
         if (savedInstanceState == null) {
             supportFragmentManager
-                    .beginTransaction()
-                    .add(R.id.container, LoginFragment())
-                    .commit()
+                .beginTransaction()
+                .add(R.id.container, LoginFragment())
+                .commit()
         }
     }
 
@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity(), NavigationHost {
      */
     override fun navigateTo(fragment: Fragment, addToBackstack: Boolean) {
         val transaction = supportFragmentManager
-                .beginTransaction()
-                .replace(R.id.container, fragment)
+            .beginTransaction()
+            .replace(R.id.container, fragment)
 
         if (addToBackstack) {
             transaction.addToBackStack(null)
